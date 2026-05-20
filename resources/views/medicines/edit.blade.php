@@ -1,4 +1,13 @@
-<x-app-layout>
+@extends('layouts.app')
+
+@push('css')
+@endpush
+
+@section('header')
+{{ __('Dashboard') }}
+@endsection
+
+@section('content')
     <x-slot name="header">
         <div class="flex justify-between items-center">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -101,4 +110,7 @@
             </div>
         </div>
     </div>
-</x-app-layout>
+@endsection
+
+@push('js')
+@endpush

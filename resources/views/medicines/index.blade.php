@@ -1,5 +1,13 @@
-<x-app-layout>
-    <x-slot name="header">
+@extends('layouts.app')
+
+@push('css')
+@endpush
+
+@section('header')
+{{ __('Dashboard') }}
+@endsection
+
+@section('content')
         <div class="flex justify-between items-center">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                 {{ __('Daftar Obat') }}
@@ -11,7 +19,6 @@
                 </a>
             @endcan
         </div>
-    </x-slot>
 
     <div class="py-8">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -70,4 +77,8 @@
 
         </div>
     </div>
-</x-app-layout>
+@endsection
+
+@push('js')
+@endpush
+
