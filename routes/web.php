@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MedicineController;
+use App\Http\Controllers\UserController;
 use App\Models\Medicine;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -29,6 +30,12 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('medicines', MedicineController::class);
+   
+
+    Route::get('users', [UserController::class, 'index'])->name('users.index');
+    Route::get('users/data', [UserController::class, 'getUsers'])->name('users.data');
+    Route::get('users/{id}/edit', [UserController::class, 'edit'])->name('users.edit');
+    Route::put('users/{id}', [UserController::class, 'update'])->name('users.update');
 });
 
 Route::get('/force-logout', function () {

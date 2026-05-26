@@ -4,7 +4,7 @@
 @endpush
 
 @section('header')
-{{ __('Dashboard') }}
+{{ __('Tambah Obat') }}
 @endsection
 
 @section('content')

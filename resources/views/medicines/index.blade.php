@@ -3,9 +3,6 @@
 @push('css')
 @endpush
 
-@section('header')
-{{ __('Dashboard') }}
-@endsection
 
 @section('content')
         <div class="flex justify-between items-center">
