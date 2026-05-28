@@ -4,7 +4,7 @@
 @endpush
 
 @section('header')
-{{ __('Dashboard') }}
+{{ __('Edit Stok Obat') }}
 @endsection
 
 @section('content')
