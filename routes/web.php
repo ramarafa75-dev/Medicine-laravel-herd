@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Models\Medicine;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\BlogController;
 
 
 Route::get('/', function () {
@@ -30,6 +31,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('medicines', MedicineController::class);
+    Route::resource('posts', BlogController::class);
    
 
     Route::get('users', [UserController::class, 'index'])->name('users.index');
